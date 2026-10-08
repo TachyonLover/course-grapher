@@ -1,26 +1,204 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  background-color: #161112;
+  --primary: #bdabb0;
+  --primary-hover: #e6ced5;
+  --secondary: #5c5848;
+  --secondary-hover: #8e8872;
+  --tertiary: #1d1c1c;
+  --tertiary-btn: #111111;
+  --tertiary-hover: #414040;
+  --accent: #a1a389;
+  --accent-hover: #d0d3b3;
+  --input-color: #424040;
+  --input-text: #d4d2d2;
+  --text-color: white;
+  font-family:'Times New Roman', Times, serif
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/*
+.add-node-btn{
+  background-color: var(--btnbg);
+  color: var(--btntxt);
+  
+  border-color: var(--btnline);
+  border-radius: 50%;
+
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bolder;
+  font-size: large;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.add-node-btn:hover{
+  background-color: var(--btnbghover);
+  color: var(--btntxthover);
 }
+*/
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar {
+  background-color: black;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+}
+
+.navbar-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-color)
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  color: var(--text-color);
+
+}
+
+.navbar-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: var(--secondary);
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: var(--secondary-hover);
+
+}
+
+
+.home-section {
+  color: var(--text-color);
+  margin-top: 100px;
+  margin-left: 30px;
+  margin-bottom: 300px;
+}
+
+.home-section h1{
+  color: var(--text-color);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight:bolder;
+  font-size:xx-large;
+}
+
+.about-section {
+  color: var(--text-color);
+}
+
+.about-section h1{
+  font-weight:bolder;
+  font-size:xx-large;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.about-section p{
+  display:flex;
+  justify-content: center;
+  font-size: large;
+}
+
+.planner-page {
+  background-color: var(--secondary);
+  min-height: 100vh;
+}
+
+.add-node-btn{
+  background-color: var(--accent);
+  color: var(--text-color);
+  font-size: x-large;
+  font-weight: bolder;
+  margin: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-node-btn:hover{
+  border-radius: 50%;
+  transform: scale(1.08);
+  background-color: var(--accent-hover);
+}
+
+.add-menu {
+  background-color: var(--tertiary);
+  color: var(--text-color);
+  border-radius: 25px;
+  font-family:'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px;
+  height: 600px;
+
+}
+
+.add-menu h2{
+  text-align: center;
+  font-size: x-large;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+
+.add-menu form{
+  color: var(--text-color);
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px;
+  font-weight: bolder;
+
+}
+
+.add-menu input{
+  background-color: var(--input-color);
+  color: var(--input-text);
+  padding-left: 8px;
+  margin-bottom: 8px;
+}
+
+.add-menu button{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tertiary-btn);
+  border-radius: 30px;
+  margin-top: 130px;
+  width: 100px;
+  height: 40px;
 }
