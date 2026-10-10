@@ -139,7 +139,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all ease 0.3s;
 }
 
 .add-node-btn:hover{
@@ -162,7 +162,7 @@ body {
   transform: translate(-50%, -50%);
 
   width: 500px;
-  height: 600px;
+  height: 450px;
 
 }
 
@@ -198,7 +198,31 @@ body {
   align-items: center;
   background-color: var(--tertiary-btn);
   border-radius: 30px;
-  margin-top: 130px;
   width: 100px;
   height: 40px;
+  transition: all ease 0.4s;
+}
+
+.add-menu button:hover{
+  background-color: var(--tertiary-hover);
+  transform: scale(1.08)
+}
+
+.node {
+  display: flex;
+  color: var(--text-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--tertiary);
+  transition: 0.3s ease;
+}
+
+.node:hover {
+  transform: scale(1.02);
+  background-color: var(--tertiary-hover);
+  filter: drop-shadow(0 0 6px rgb(29, 32, 32)) drop-shadow(0 0 7px #252424);
 }
